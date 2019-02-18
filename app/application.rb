@@ -16,7 +16,7 @@ class Application
           resp.status 400
         end
       end
-      binding.pry
+      # binding.pry
       if item.nil?
         resp.write "Item not found"
         resp.status 400
