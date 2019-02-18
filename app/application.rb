@@ -8,7 +8,7 @@ class Application
     # if req.path.match(/items/)
       
       item_name = req.path.split("/testing").last 
-      binding.pry
+      # binding.pry
       item = Item.all.find{|i| i.name == item_name}
       if req.path == "/items/#{item}"
         resp.write item.price
