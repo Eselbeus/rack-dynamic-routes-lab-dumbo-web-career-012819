@@ -12,6 +12,7 @@ class Application
       # binding.pry
       if item != nil
         resp.write item.price
+        binding.pry
       else
         resp.write "Item not found"
         resp.status 400
