@@ -9,8 +9,12 @@ class Application
       
       item_name = req.path.split("/items/").last 
       item = @@items.find do |i| 
+        if i.name
         i.name == item_name
-        
+        else
+          resp.write "Item not found"
+          resp.status 400
+        end
       end
       binding.pry
       if item.nil?
