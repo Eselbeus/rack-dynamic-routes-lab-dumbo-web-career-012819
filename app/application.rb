@@ -11,7 +11,6 @@ class Application
       item = @@items.find do |i| 
           i.name == item_name
       end
-      # binding.pry
       if item == nil
         resp.write "Item not found"
         resp.status = 400
