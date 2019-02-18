@@ -12,7 +12,7 @@ class Application
           i.name == item_name
       end
       binding.pry
-      if item.nil?
+      if item == nil
         resp.write "Item not found"
         resp.status 400
       else
